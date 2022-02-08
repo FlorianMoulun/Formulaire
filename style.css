@@ -16,14 +16,85 @@ header{
 }
 
 h1{
-	font-size: 50px;
+	font-size: 40px;
 	color: #fff;
 	font-family: 'Allerta', sans-serif;
 }
 
-header p{
+
+p{
 	font-size: 20px;
+	font-family: 'Alata', sans-serif; 
+}
+
+h2{
+	font-size: 30px;
+	font-family: 'Allerta', sans-serif;
+}
+
+header p{
 	color: #fff;
 	opacity: 30%;
-	font-family: 'Alata', sans-serif; 
+	
+}
+
+section{
+	color: #fff;
+	width: 80vh;
+	height: 70vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 10vh;
+	
+}
+
+
+#info{
+	opacity: 30%;
+}
+
+
+#section_haut{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+
+}
+#section_bas{
+	width: 40vh;
+	height: 30vh;
+	display: flex;
+}
+#section_image{
+	width: 25%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#tel{
+	width: 6vh;
+	height: 6vh;
+}
+
+#mail{
+	width: 5vh;
+	height: 4vh;
+	margin-left: 0.8vh;
+}
+#pin{
+	width: 6vh;
+	height: 6vh;
+	margin-left: 0.4vh;
+}
+
+#section_p{
+	width: 75%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
