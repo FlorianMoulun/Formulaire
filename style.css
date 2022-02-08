@@ -1,3 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Allerta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+
 body{
 	background-color: #3E1F92;
+}
+
+header{
+	width: 100%;
+	height: 15vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+h1{
+	font-size: 50px;
+	color: #fff;
+	font-family: 'Allerta', sans-serif;
+}
+
+header p{
+	font-size: 20px;
+	color: #fff;
+	opacity: 30%;
+	font-family: 'Alata', sans-serif; 
 }
