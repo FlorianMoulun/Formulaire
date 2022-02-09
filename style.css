@@ -242,7 +242,7 @@ textarea{
 
 @media only screen and (max-width: 770px){
 h1{
-	font-size: 30px;
+	font-size: 20px;
 	margin-top: -1vh;	
 }
 p{
@@ -251,9 +251,10 @@ p{
 h2{
 	font-size: 20px;
 }
+section{
+	width: 100%;
+}
 #section_haut{
-	margin-left: 15vh;
-	width: 100vh;
 	margin-top: -1vh;
 }
 
@@ -262,8 +263,8 @@ h2{
 	justify-content: space-evenly;
 	flex-direction: row;
 	height: 10vh;
-	width: 80vh;
-	margin-left: 20vh;
+	width: 90vh;
+	
 	margin-top: -8vh;
 }
 #telhover, #mailhover, #pinhover{
@@ -275,18 +276,23 @@ h2{
 	width: 5vh;
 	
 }
-#pin{
-	margin-left: 5vh;
+#tel{
+	margin-right: -3vh;
 }
+#mailp{
+	margin-right: 10vh;
+}
+
 #mail{
 	height: 4vh;
 	width: 4vh;
-	margin-left: 2vh;
+	margin-right: -2vh;
+	
 }
 
 form{
 	margin-top: 20vh;
-	margin-left: -65vh;
+	margin-left: -82vh;
 	height: 60vh;
 
 }
@@ -304,3 +310,45 @@ form{
 	margin-left: 3vh;
 }
 }
+@media only screen and (max-width: 430px){
+
+	h1{
+	font-size: 30px;
+	margin-top: -1vh;	
+}
+p{
+	font-size: 10px;
+}
+h2{
+	font-size: 15px;
+}
+header{
+	width: 20vh;
+}
+#section_haut{
+	width: 85vh;
+}
+form{
+	width: 20vh;
+}
+textarea{
+	width: 20vh;
+}
+#footer{
+	width: 20vh;
+}
+#section_p{
+	width: 20vh;
+}
+#section_haut{
+	width: 20vh;
+}
+section{
+	width: 20vh;
+}
+}
+
+
+
+
+	
