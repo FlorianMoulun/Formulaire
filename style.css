@@ -63,11 +63,6 @@ section{
 
 }
 
-#section_bas{
-	width: 40vh;
-	height: 30vh;
-	display: flex;
-}
 #section_image{
 	width: 25%;
 	height: 100%;
@@ -93,7 +88,7 @@ section{
 }
 
 #section_p{
-	width: 75%;
+	width: 80%;
 	height: 100%;
 	margin-left: 10vh;
 	display: flex;
@@ -103,7 +98,28 @@ section{
 #telhover,#mailhover, #pinhover{
 	display: flex;
 	margin-top: 5vh;
+	width: 30vh;
+
 }
+
+#telhover:hover, #mailhover:hover, #pinhover:hover{
+	background-color: #512B94 ;
+	border-radius: 10px;
+	border: 1px solid #FA949D;
+}
+.imagehover{
+	height: 8vh;
+	width: 8vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.imagehover:hover{
+	background-color: #512B94 ;
+	border-radius: 10vh;
+	border: 1px solid #FA949D;
+}
+
 #mailp, #pinp, #telp{
 	margin-left: 5vh;
 }
