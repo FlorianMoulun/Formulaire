@@ -99,6 +99,7 @@ section{
 	justify-content: space-between;
 }
 
+
 #footer{
 	width: 50vh;
 	height: 5vh;
@@ -116,9 +117,93 @@ main{
 
 form{
 	background-color: #F5F5F5;
-	width: 95vh;
+	width: 80vh;
 	height: 70vh;
-	margin-left: 20vh;
+	margin-left: 25vh;
 	margin-top: 6vh;
 	border-radius: 20px;
+}
+
+
+
+.image{
+	width: 3vh;
+	height: 3vh;
+}
+
+#nom, #prenom, #mail, #tel{
+	display: flex;
+
+}
+
+#form_top, #form_middle{
+	display: flex;
+	height: 25%;
+}
+
+#form_top{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+#form_middle{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+input{
+	border-radius: 1vh;
+	height: 3vh;
+	width: 21vh;
+	background: rgba(128, 128, 128, 0.1);
+	border: none;
+	outline: none;
+}
+textarea{
+	border-radius: 1vh;
+	height: 15vh;
+	width: 62vh;
+	background: rgba(128, 128, 128, 0.1);
+	border: none;
+	outline: none;
+
+}
+#form_bottom{
+	margin-left: 10vh;
+	height: 30%;
+}
+#button{
+
+	width: 20%;
+	height: 50%;
+	background-color: #FA949D;
+	border-radius: 10px;
+	margin-right: 7vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+#form_footer{
+	height: 18%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+#pmail{
+	margin-top:-0.1vh;
+	margin-left: 2vh;
+}
+#image_nom{
+	margin-top: 2vh;
+	margin-right: 3vh;
+}
+#image_prenom{
+	margin-top: 2vh;
+	margin-right: 3vh;
+}
+#image_tel{
+	margin-top: 2vh;
+	margin-right: 3vh;
 }
