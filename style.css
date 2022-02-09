@@ -7,7 +7,7 @@ body{
 }
 
 header{
-	width: 100%;
+	width: 100vw;
 	height: 15vh;
 	display: flex;
 	justify-content: center;
@@ -94,6 +94,7 @@ section{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	margin-bottom: 10vh;
 }
 #telhover,#mailhover, #pinhover{
 	display: flex;
@@ -133,7 +134,7 @@ section{
 	display: flex;
 	justify-content: space-evenly;
 	align-items: flex-end;
-	margin-top: 15vh;
+	margin-left: 8vh;
 
 }
 
@@ -239,3 +240,67 @@ textarea{
 	margin-right: 3vh;
 }
 
+@media only screen and (max-width: 770px){
+h1{
+	font-size: 30px;
+	margin-top: -1vh;	
+}
+p{
+	font-size: 15px;
+}
+h2{
+	font-size: 20px;
+}
+#section_haut{
+	margin-left: 15vh;
+	width: 100vh;
+	margin-top: -1vh;
+}
+
+#section_p{
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: row;
+	height: 10vh;
+	width: 80vh;
+	margin-left: 20vh;
+	margin-top: -8vh;
+}
+#telhover, #mailhover, #pinhover{
+	width: 30vh;
+	height: 5vh;
+}
+#pin, #tel{
+	height: 5vh;
+	width: 5vh;
+	
+}
+#pin{
+	margin-left: 5vh;
+}
+#mail{
+	height: 4vh;
+	width: 4vh;
+	margin-left: 2vh;
+}
+
+form{
+	margin-top: 20vh;
+	margin-left: -65vh;
+	height: 60vh;
+
+}
+#footer{
+	margin-top: 4vh;
+	margin-left: 20vh;
+}
+#form_bottom{
+	margin-top: -3vh;
+}
+#button{
+	margin-top: 5vh;
+}
+#tel{
+	margin-left: 3vh;
+}
+}
