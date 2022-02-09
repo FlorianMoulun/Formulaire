@@ -62,6 +62,7 @@ section{
 	margin-top: 3vh;
 
 }
+
 #section_bas{
 	width: 40vh;
 	height: 30vh;
@@ -94,11 +95,21 @@ section{
 #section_p{
 	width: 75%;
 	height: 100%;
+	margin-left: 10vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 }
-
+#telhover,#mailhover, #pinhover{
+	display: flex;
+	margin-top: 5vh;
+}
+#mailp, #pinp, #telp{
+	margin-left: 5vh;
+}
+#mail{
+	margin-top: 1vh;
+}
 
 #footer{
 	width: 50vh;
@@ -157,7 +168,8 @@ input{
 	width: 21vh;
 	background: rgba(128, 128, 128, 0.1);
 	border: none;
-	outline: none;
+	outline-color: #FA949D;
+	padding-left: 10px;
 }
 textarea{
 	border-radius: 1vh;
@@ -165,7 +177,10 @@ textarea{
 	width: 62vh;
 	background: rgba(128, 128, 128, 0.1);
 	border: none;
-	outline: none;
+	padding-left: 10px;
+	padding-top: 10px;
+	resize: none;
+	outline-color: #FA949D;
 
 }
 #form_bottom{
@@ -207,3 +222,4 @@ textarea{
 	margin-top: 2vh;
 	margin-right: 3vh;
 }
+
