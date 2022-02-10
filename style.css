@@ -217,6 +217,15 @@ textarea{
 
 }
 
+#button:hover{
+	background-color:#E0115F ;
+}
+
+#button:active{
+	background-color:#FA949D ;
+	border: 2px solid #E0115F;
+}
+
 #form_footer{
 	height: 18%;
 	display: flex;
@@ -310,6 +319,13 @@ form{
 	margin-left: 3vh;
 }
 }
+
+
+#telhover:hover, #mailhover:hover, #pinhover:hover{
+	background-color: #3E1F92;
+	border: none;
+}
+
 
 @media only screen and (max-width: 430px){
 		h1{
@@ -430,6 +446,7 @@ section{
 }
 
 }
+
 
 @media only screen and (max-width: 380px){
 
