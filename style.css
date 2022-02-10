@@ -187,6 +187,7 @@ input{
 	border: none;
 	outline-color: #FA949D;
 	padding-left: 10px;
+	cursor: pointer;
 }
 textarea{
 	border-radius: 1vh;
@@ -198,6 +199,7 @@ textarea{
 	padding-top: 10px;
 	resize: none;
 	outline-color: #FA949D;
+	cursor: pointer;
 
 }
 #form_bottom{
@@ -215,6 +217,7 @@ textarea{
 	justify-content: center;
 	align-items: center;
 	border: none;
+	cursor: pointer;
 }
 
 #button:hover{
