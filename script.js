@@ -5,6 +5,13 @@ const tel = document.querySelector('#input_tel')
 const message = document.querySelector('#textarea')
 const bouton = document.querySelector('#button')
 
+
+const nomvide = document.querySelector('#nom_vide')
+const prenomvide = document.querySelector('#prenom_vide')
+const mailvide = document.querySelector('#mail_vide')
+const telvide = document.querySelector('#tel_vide')
+const messagevide = document.querySelector('#message_vide')
+
 let nomrose = document.querySelector('#nom_rose')
 let nomgris = document.querySelector('#image_nom')
 let prenomrose = document.querySelector('#prenom_rose')
@@ -79,13 +86,57 @@ message.addEventListener('click', function(){
 })
 
 
+
+
 bouton.addEventListener('click', function(){
-	if ((nom.value == 0) || (prenom.value ==0) || (mail.value=0) || (tel.value ==0) || (message.value == 0)){
+	if ((nom.value == 0) || (prenom.value == 0) || (mail.value == 0) || (tel.value ==0) || (message.value == 0)){
 		alert('Erreur !')
 	}
-	else{
+	else {
 		alert('Message envoyer avec succès !')
 	}
 
+	if (nom.value == 0) {
+		nomvide.innerHTML = "Champ vide !";
+	}
+	else{
+		nomvide.style.display = "none"
+	}
+	if (prenom.value == 0){
+		prenomvide.innerHTML = "Champ vide !";
+	}
+	else{
+		prenomvide.style.display = "none"
+	}
+	if (mail.value == 0){
+		mailvide.innerHTML = "Champ vide !";
+	}
+	else{
+		mailvide.style.display = "none"
+	}
+	if (tel.value == 0){
+		telvide.innerHTML = "Champ vide !";
+	}
+	else{
+		telvide.style.display = "none"
+	}
+	if (message.value == 0) {
+		messagevide.innerHTML = "Champ vide !";
+	}
+	else{
+		messagevide.style.display = "none"
+	}
+
+	
+
+	nomrose.style.display = "none";
+	nomgris.style.display = "flex";
+	prenomrose.style.display = "none";
+	prenomgris.style.display = "flex";
+	mailrose.style.display = "none";
+	mailgris.style.display = "flex";
+	telrose.style.display = "none";
+	telgris.style.display = "flex";
 
 })
+

@@ -216,7 +216,6 @@ textarea{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border: none;
 	cursor: pointer;
 }
 
@@ -281,7 +280,13 @@ textarea{
 	margin-top: 2vh;
 }
 
-
+#nom_vide, #prenom_vide, #mail_vide, #tel_vide, #message_vide{
+	color: #FF1414;
+	margin-left: 5vh;
+	margin-top: -0.3vh;
+	position: absolute;
+	
+}
 
 
 
