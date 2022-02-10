@@ -430,3 +430,17 @@ section{
 }
 
 }
+
+@media only screen and (max-width: 380px){
+
+header{
+	margin-left: 3vh;
+}
+form{
+	margin-right: -5vh;
+}
+textarea{
+	width: 40vh;
+	margin-left: -1vh;
+}
+}
