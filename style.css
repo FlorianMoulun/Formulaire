@@ -477,6 +477,16 @@ section{
 	width: 10vh;
 }
 
+#nom_rose{
+	width: 3vh;
+	height: 3vh;
+}
+#prenom_rose{
+	margin-top: 0vh;
+}
+#tel_rose{
+	margin-top: 0vh;
+}
 }
 
 

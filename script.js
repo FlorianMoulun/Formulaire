@@ -3,6 +3,7 @@ const prenom = document.querySelector('#input_prenom')
 const mail = document.querySelector('#input_mail')
 const tel = document.querySelector('#input_tel')
 const message = document.querySelector('#textarea')
+const bouton = document.querySelector('#button')
 
 let nomrose = document.querySelector('#nom_rose')
 let nomgris = document.querySelector('#image_nom')
@@ -74,5 +75,17 @@ message.addEventListener('click', function(){
 	mailgris.style.display = "flex";
 	telrose.style.display = "none";
 	telgris.style.display = "flex";
+
+})
+
+
+bouton.addEventListener('click', function(){
+	if ((nom.value == 0) || (prenom.value ==0) || (mail.value=0) || (tel.value ==0) || (message.value == 0)){
+		alert('Erreur !')
+	}
+	else{
+		alert('Message envoyer avec succès !')
+	}
+
 
 })
