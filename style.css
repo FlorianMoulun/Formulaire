@@ -214,7 +214,7 @@ textarea{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
+	border: none;
 }
 
 #button:hover{
@@ -252,6 +252,35 @@ textarea{
 	margin-top: -0.01vh;
 	margin-left: 8vh;
 }
+
+
+#nom_rose{
+	display: none;
+	margin-right: 3vh;
+}
+#prenom_rose{
+	width: 3vh;
+	height: 3vh;
+	display: none;
+	margin-top: 2vh;
+	margin-right: 3vh;
+}
+#mail_rose{
+	width: 3vh;
+	height: 3vh;
+	display: none;
+}
+#tel_rose{
+	width: 3vh;
+	height: 3vh;
+	display: none;
+	margin-right: 3vh;
+	margin-top: 2vh;
+}
+
+
+
+
 
 @media only screen and (max-width: 770px){
 h1{
