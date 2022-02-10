@@ -50,7 +50,7 @@
 						<img class="image" id="image_nom" src="assets/media/nom.svg" alt="logo haut du corp d'un homme et un rond avec un i à l'interieur">
 						<p>Nom</p>
 					</div>
-					<input id="input_nom" type="text">
+					<input id="input_nom" type="text" pattern="[a-zA-Z]+" minlength="3" maxlength="15">
 					<p id="nom_vide"></p>
 				</div>
 				<div>
@@ -59,7 +59,7 @@
 							<img class="image" id="image_prenom" src="assets/media/prenom.svg" alt="logo haut du corp d'un homme et une fleche">
 							<p>Prenom</p>
 						</div>
-						<input id="input_prenom" type="text">
+						<input id="input_prenom" type="text" pattern="[a-zA-Z]+" minlength="3" maxlength="15">
 						<p id="prenom_vide"></p>
 				</div>	
 			</div>
@@ -70,7 +70,7 @@
 						<img class="image" id="image_mail"  src="assets/media/mail_gris.svg" alt="logo gris mail">
 						<p id="pmail">Mail</p>
 					</div>
-					<input id="input_mail" type="text">
+					<input id="input_mail" type="text" pattern="(\w\.?)+@[\w\.-]+\.\w{2,}" maxlength="30" >
 					<p id="mail_vide"></p>
 				</div>
 				<div>
@@ -79,13 +79,13 @@
 						<img class="image" id="image_tel" src="assets/media/tel_gris.svg" alt="logo de telephone gris">
 						<p>Téléphone</p>
 					</div>
-					<input id="input_tel" type="text">
+					<input id="input_tel" type="text" pattern="[0-9]" maxlength="14">
 					<p id="tel_vide"></p>
 				</div>
 			</div>
 			<div id="form_bottom">
 				<p>Message</p>
-				<textarea id="textarea"></textarea>
+				<textarea id="textarea" maxlength="729"></textarea>
 				<p id="message_vide"></p>
 			</div>
 			<div id="form_footer">
