@@ -21,6 +21,13 @@ let mailgris = document.querySelector('#image_mail')
 let telrose = document.querySelector('#tel_rose')
 let telgris = document.querySelector('#image_tel')
 
+
+
+let regex = /[A-Z]/;
+let regexmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+
+
 nom.addEventListener('click', function(){
 
 	nomrose.style.display = "flex";
@@ -88,43 +95,59 @@ message.addEventListener('click', function(){
 
 
 
-bouton.addEventListener('click', function(){
-	if ((nom.value == 0) || (prenom.value == 0) || (mail.value == 0) || (tel.value ==0) || (message.value == 0)){
+bouton.addEventListener('click', function(form){
+	if ((nom.value == "") || (prenom.value == "") || (mail.value == "") || (tel.value == "") || (message.value == "")){
 		alert('Erreur !')
 	}
-	else {
+	else{
 		alert('Message envoyer avec succès !')
 	}
 
-	if (nom.value == 0) {
+	if (nom.value === "") {
 		nomvide.innerHTML = "Champ vide !";
 	}
-	else{
-		nomvide.style.display = "none"
+	else if (regex.test(String(nom.value)) == false ) {
+		nomvide.innerHTML = "Manque une majuscule !";
+		nomvide.style.display = "flex";
+		nomvide.style.marginLeft = "-0vh"
 	}
-	if (prenom.value == 0){
+	else{
+		nomvide.style.display = "none";
+	}
+	if (prenom.value === ""){
 		prenomvide.innerHTML = "Champ vide !";
 	}
-	else{
-		prenomvide.style.display = "none"
+	else if (regex.test(String(prenom.value)) == false ) {
+		prenomvide.innerHTML = "Manque une majuscule !";
+		prenomvide.style.display = "flex";
+		prenomvide.style.marginLeft = "-0vh"
 	}
-	if (mail.value == 0){
+	else{
+		prenomvide.style.display = "none";
+	}
+
+	if (mail.value === ""){
 		mailvide.innerHTML = "Champ vide !";
 	}
-	else{
-		mailvide.style.display = "none"
+	else if (regexmail.test(String(mail.value)) == false ) {
+		mailvide.innerHTML = "Mail invalide !";
+		mailvide.style.display = "flex";
+		mailvide.style.marginLeft = "4vh"
 	}
-	if (tel.value == 0){
+	else{
+		mailvide.style.display = "none";
+	}
+	if (tel.value === ""){
 		telvide.innerHTML = "Champ vide !";
 	}
 	else{
-		telvide.style.display = "none"
+		telvide.style.display = "none";
 	}
-	if (message.value == 0) {
+	if (message.value === "") {
 		messagevide.innerHTML = "Champ vide !";
 	}
 	else{
-		messagevide.style.display = "none"
+		messagevide.style.display = "none";
 	}
 
 	
@@ -138,5 +161,8 @@ bouton.addEventListener('click', function(){
 	telrose.style.display = "none";
 	telgris.style.display = "flex";
 
+
+
 })
+
 
