@@ -25,7 +25,7 @@ let telgris = document.querySelector('#image_tel')
 
 let regex = /[A-Z]/;
 let regexmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
+let regexphone = /[0-9]/;
 
 
 nom.addEventListener('click', function(){
@@ -140,13 +140,19 @@ bouton.addEventListener('click', function(form){
 	if (tel.value === ""){
 		telvide.innerHTML = "Champ vide !";
 	}
-	else{
+	else if (regexphone.test(String(tel.value)) == false ) {
+		telvide.innerHTML = "Pas un numéros !";
+		telvide.style.display = "flex";
+		telvide.style.marginLeft = "3vh"
+	}
+	else {
 		telvide.style.display = "none";
 	}
 	if (message.value === "") {
 		messagevide.innerHTML = "Champ vide !";
 	}
-	else{
+	
+	else {
 		messagevide.style.display = "none";
 	}
 
