@@ -95,8 +95,15 @@ message.addEventListener('click', function(){
 
 
 
-bouton.addEventListener('click', function(form){
-	if ((nom.value == "") || (prenom.value == "") || (mail.value == "") || (tel.value == "") || (message.value == "")){
+bouton.addEventListener('click', function(){
+
+	if ( ((nom.value == "") && (regex.test(String(nom.value)== false))) 
+	|| ((prenom.value == "") && (regex.test(String(prenom.value)== false))) 
+	|| ((mail.value == "") && (regexmail.test(String(mail.value)== false))) 
+	|| ((tel.value == "") && (regexphone.test(String(tel.value)== false))) 
+	|| (message.value == "")){
+
+
 		alert('Erreur !')
 	}
 	else{
