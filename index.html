@@ -43,7 +43,7 @@
 		</section>
 
 
-		<form onsubmit="return send()" method="get" name="form">
+		<form  method="post" name="form">
 			<div id="form_top">
 				<div>
 					<div id="nom">
@@ -51,7 +51,7 @@
 						<img class="image" id="image_nom" src="assets/media/nom.svg" alt="logo haut du corp d'un homme et un rond avec un i à l'interieur">
 						<p>Nom</p>
 					</div>
-					<input id="input_nom" type="text" pattern="[a-zA-Z]+" minlength="3" maxlength="15">
+					<input id="input_nom" type="text" pattern="[A-Z]+" minlength="3" maxlength="15" name="nomform">
 					<p id="nom_vide"></p>
 				</div>
 				<div>
@@ -60,7 +60,7 @@
 							<img class="image" id="image_prenom" src="assets/media/prenom.svg" alt="logo haut du corp d'un homme et une fleche">
 							<p>Prenom</p>
 						</div>
-						<input id="input_prenom" type="text" pattern="[a-zA-Z]+" minlength="3" maxlength="15">
+						<input id="input_prenom" type="text" pattern="[a-zA-Z]+" minlength="3" maxlength="15" name="prenomform">
 						<p id="prenom_vide"></p>
 				</div>	
 			</div>
@@ -71,7 +71,7 @@
 						<img class="image" id="image_mail"  src="assets/media/mail_gris.svg" alt="logo gris mail">
 						<p id="pmail">Mail</p>
 					</div>
-					<input id="input_mail" type="text" pattern="(\w\.?)+@[\w\.-]+\.\w{2,}" maxlength="30" >
+					<input id="input_mail" type="text" pattern="(\w\.?)+@[\w\.-]+\.\w{2,}" maxlength="30" name="mailform">
 					<p id="mail_vide"></p>
 				</div>
 				<div>
@@ -86,28 +86,28 @@
 			</div>
 			<div id="form_bottom">
 				<p>Message</p>
-				<textarea id="textarea" maxlength="729"></textarea>
+				<textarea id="textarea" maxlength="729" name="messageform"></textarea>
 				<p id="message_vide"></p>
 			</div>
 			<div id="form_footer">
-				<div id="button">
-					Valider
-				</div>
+				<button type="submit" id="button">
+					<p>Valider</p>
+				</button>
 			</div>
 		</form>
 	</main>
 		<div id="footer">
 				<div class="imagehover">
-					<img  src="assets/media/twitter.svg" alt="logo de twitter">
+					<img class="imagefooter" src="assets/media/twitter.svg" alt="logo de twitter">
 				</div>
 				<div class="imagehover">
-					<img  src="assets/media/linkedin.svg" alt="logo de linkedin">
+					<img class="imagefooter" src="assets/media/linkedin.svg" alt="logo de linkedin">
 				</div>
 				<div class="imagehover">
-					<img  src="assets/media/facebook.svg" alt="logo de facebook">
+					<img class="imagefooter"  src="assets/media/facebook.svg" alt="logo de facebook">
 				</div>
 				<div class="imagehover">
-					<img  src="assets/media/github.svg" alt="logo de github">
+					<img class="imagefooter" src="assets/media/github.svg" alt="logo de github">
 				</div>
 			</div>
 <script type="text/javascript" src="script.js"></script>
