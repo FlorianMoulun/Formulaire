@@ -4,15 +4,17 @@
 
 body{
 	background-color: #3E1F92;
+	margin: 0;
 }
 
 header{
-	width: 100%;
+	width: 99vw;
 	height: 15vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	margin: 0;
 }
 
 h1{
@@ -94,14 +96,14 @@ section{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	margin-top: -5vh;
+	margin-top: -10vh;
 	margin-bottom: 15vh;
 	
 }
 #telhover,#mailhover, #pinhover{
 	display: flex;
 	margin-top: 5vh;
-	width: 30vh;
+	width: 35vh;
 
 }
 
@@ -262,6 +264,8 @@ textarea{
 #nom_rose{
 	display: none;
 	margin-right: 3vh;
+	margin-top: 2vh;
+	height: 3vh;
 }
 #prenom_rose{
 	width: 3vh;
@@ -305,11 +309,19 @@ h2{
 	font-size: 20px;
 }
 section{
-	width: 100vw;
+	width: 80vw;
 }
 #section_haut{
-	width: 100vw;
+	width: 90vw;
 	margin-top: -1vh;
+	display: flex;
+
+	justify-content: center;
+}
+header{
+	width: 90vw;
+	margin: 0;
+	
 }
 
 #section_p{
@@ -338,16 +350,22 @@ section{
 	margin-left: 2vh;
 	margin-top: 1vh;
 }
-
+body{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 form{
 	margin-top: 25vh;
-	margin-left: -85vw;
+	margin-left: -75vw;
 	height: 60vh;
 
 }
 #footer{
 	margin-top: 4vh;
-	margin-left: 30vh;
+	margin-left: 0vh;
+	display: flex;
+	justify-content: space-around;
 }
 #form_bottom{
 	margin-top: -3vh;
@@ -363,6 +381,14 @@ form{
 	background-color:#3E1F92 ;
 	border:  none;
 }
+.imagehover:hover{
+	background-color: #3E1F92;
+	border:  none;
+
+}
+.imagefooter{
+	margin-right:-1vh;
+}
 
 #button{
 	font-size: 15px;
@@ -372,7 +398,7 @@ form{
 }
 
 
-@media only screen and (max-width: 430px){
+@media only screen and (max-width: 450px){
 		h1{
 			font-size: 30px;
 		}
@@ -381,6 +407,9 @@ form{
 		}
 		p{
 			font-size: 10px;
+		}
+		header{
+			margin-left: 3vh;
 		}
 		#telo, #pino{
 			width: 2vh;
@@ -399,14 +428,19 @@ form{
 #section_p{
 	height: 10vh;
 	width: 100vw;
-	margin-left: 0vh;
+	margin-left: 5vh;
 	margin-top: -8vh;
 }
-#telhover, #mailhover, #pinhover{
+#telhover, #mailhover{
 	width: 50vw;
 	height: 2vh;
-	margin-left: 25vh;	
-
+}
+#section_p{
+	width: 10vh;
+	margin-left: -10vh;
+}
+#pinhover{
+	width: 2vh;
 }
 #mailo{
 	margin-right: -1vh;
@@ -445,9 +479,9 @@ form{
 
 form{
 	margin-top: 16vh;
-	margin-left: -4vh;
+	margin-left: -9vh;
 	height: 60vh;
-	width: 45vh;
+	width: 50vh;
 
 }
 .imagefooter{
@@ -464,7 +498,7 @@ input{
 }
 
 textarea{
-	width: 38vh;
+	width: 45vh;
 }
 #form_bottom{
 	margin-left: 3vh;
@@ -488,8 +522,8 @@ textarea{
 
 #footer{
 	margin-top: 4vh;
-	width: 40vh;
-	margin-left: 3vh;
+	width: 50vh;
+	margin-left: -10vh;
 }
 #form_bottom{
 	margin-top: -3vh;
@@ -511,12 +545,30 @@ section{
 #tel_rose{
 	margin-top: 0vh;
 }
-}
+
 button{
 	font-size: 15px;
 	font-family: 'Alata', sans-serif; 
+}}
+@media only screen and (max-width: 420px){
+
+form{
+	width: 42vh;
+}
+textarea{
+	width: 33vh;
+}
+#section_p{
+	margin-top: -5vh;
+	margin-left: -15vh;
+}
+#section_haut{
+	margin-left: 36vh;
 }
 
+
+
+}
 @media only screen and (max-width: 380px){
 
 header{
@@ -524,14 +576,16 @@ header{
 }
 form{
 	
-	margin-left: -6vh;
+	margin-left: -9.5vh;
+	width: 50vh;
 
 }
 #section_haut{
-	margin-left: 80vw;
+	margin-left: 75vw;
 }
 #section_p{
-	margin-left: -20vw;
+	margin-top: -7vh;
+	margin-left: -30vw;
 }
 #mailo{
 	margin-left: 10vw;
@@ -540,23 +594,37 @@ form{
 	margin-left: 20vw;
 }
 textarea{
-	width: 40vh;
-	margin-left: -1vh;
+	width: 41vh;
 }
 
 button{
 	font-size: 10px;
 	font-family: 'Alata', sans-serif; 
 }
+#footer{
+	margin-left: -8vh;
+}
 }
 
 @media only screen and (max-width: 330px){
-
+h1{
+	font-size: 25px;
+}
+p{
+	font-size: 8px;
+}
 #section_haut{
-	margin-left: 90vw ;
+	margin-left: 80vw ;
 }
 #section_p{
-	margin-left: -40vw;
+	margin-left: -60vw;
+	margin-top: -6vh;
+}
+#telhover{
+	width: 18vh;
+}
+#mailhover{
+	width: 18vh;
 }
 #mailo{
 	margin-left: 15vw;
@@ -565,12 +633,16 @@ button{
 	margin-left: 30vw;
 }
 form{
-	margin-left: -17vw;
+	margin-left: -20vw;
+	width: 42vh;
 }
 #footer{
-	margin-left: 1vw;
+	margin-left: -15vw;
 }
 #telhover{
-	margin-left: 40vw;
+	margin-left: 10vw;
+}
+textarea{
+	width: 35vh;
 }
 }

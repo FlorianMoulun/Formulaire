@@ -4,13 +4,14 @@ const mail = document.querySelector('#input_mail')
 const tel = document.querySelector('#input_tel')
 const message = document.querySelector('#textarea')
 const bouton = document.querySelector('#button')
-
+const form = document.querySelector('form')
 
 const nomvide = document.querySelector('#nom_vide')
 const prenomvide = document.querySelector('#prenom_vide')
 const mailvide = document.querySelector('#mail_vide')
 const telvide = document.querySelector('#tel_vide')
 const messagevide = document.querySelector('#message_vide')
+
 
 let nomrose = document.querySelector('#nom_rose')
 let nomgris = document.querySelector('#image_nom')
@@ -23,10 +24,10 @@ let telgris = document.querySelector('#image_tel')
 
 
 
-let regex = /[A-Z]/;
-let regexmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-let regexphone = /[0-9]/;
-
+let regex = /^[A-Z][A-Za-z]+$/;
+let regexmail =/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+let regexphone = /^(^[0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}$)|(^[0-9]{10}$)|(^[0-9]{2}.[0-9]{2}.[0-9]{2}.[0-9]{2}.[0-9]{2}$)|(^\+[0-9]{1,3}(| )([0-9]{9})|([0-9]{1} [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2})|(^(\([0-9]{3}\)|[0-9]{3})(| )([0-9]{3})(| |-)([0-9]{4})$))$/im;
+let regexmessage = /^[^<>]*$/;
 
 nom.addEventListener('click', function(){
 
@@ -95,22 +96,12 @@ message.addEventListener('click', function(){
 
 
 
-bouton.addEventListener('click', function(){
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  console.log(nom.value)
+	if (nom.value == "" || prenom.value =="" || mail.value =="" || tel.value =="" || message.value == "" || !regex.test(nom.value) || !regexmail.test(mail.value) ||!regexphone.test(tel.value) || !regexmessage.test(message.value) || !regex.test(prenom.value)){
 
-	if ( ((nom.value == "") && (regex.test(String(nom.value)== false))) 
-	|| ((prenom.value == "") && (regex.test(String(prenom.value)== false))) 
-	|| ((mail.value == "") && (regexmail.test(String(mail.value)== false))) 
-	|| ((tel.value == "") && (regexphone.test(String(tel.value)== false))) 
-	|| (message.value == "")){
-
-
-		alert('Erreur !')
-	}
-	else{
-		alert('Message envoyer avec succès !')
-	}
-
-	if (nom.value === "") {
+		if (nom.value === "") {
 		nomvide.innerHTML = "Champ vide !";
 	}
 	else if (regex.test(String(nom.value)) == false ) {
@@ -173,9 +164,31 @@ bouton.addEventListener('click', function(){
 	mailgris.style.display = "flex";
 	telrose.style.display = "none";
 	telgris.style.display = "flex";
+		
+	}
+
+
+	
+
+
+else{
 
 
 
+  const data = new FormData(form);
+   // configure a request
+   const xhr = new XMLHttpRequest();
+
+   xhr.responseType = 'json';
+   xhr.open('POST', 'script.php');
+
+   // send request
+   xhr.send(data);
+
+   // listen for `load` event
+   xhr.onload = () => {
+     let res = xhr.response;
+     form.reset();
+       console.log(res);
+   }}
 })
-
-
